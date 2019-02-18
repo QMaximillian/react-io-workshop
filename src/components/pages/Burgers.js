@@ -1,6 +1,7 @@
 import React from 'react';
 import {PageContainer} from "../shared/Layout";
 import {useResource} from "../../hooks/use-resource";
+import PlaceCard from "../shared/PlaceCard";
 
 const Burgers = () => {
   const burgers = useResource({path: 'burgers'});
@@ -9,7 +10,7 @@ const Burgers = () => {
       <>
         <PageContainer>
           <h1>Burger Places</h1>
-          <pre>{JSON.stringify(burgers)}</pre>
+          { burgers.map( place => <PlaceCard key={place.id} place={place} />)}
         </PageContainer>
       </>
   );
