@@ -2,8 +2,6 @@ import React from 'react';
 import {StyledLink} from "../shared/StyledLink";
 import {PageContainer} from "../shared/Layout";
 
-
-
 const Home = () => {
   return (
       <PageContainer>

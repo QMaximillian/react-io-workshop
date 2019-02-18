@@ -26,7 +26,7 @@ const authRedirect = currentUser => {
         <Header />
         <Switch>
           <Route path="/burgers" exact component={Burgers} />
-          <Redirect from="*" to="/" />
+          <Redirect from="*" to="/burgers" />
         </Switch>
       </>
   );

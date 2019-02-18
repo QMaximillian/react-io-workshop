@@ -1,4 +1,5 @@
 import axios from "axios";
+import {LOCAL_STORAGE_KEY} from "../components/shared/Auth";
 
 // grab the api url from env variables
 const API_URL = `${process.env.REACT_APP_API_URL}`;
@@ -7,9 +8,6 @@ const API_URL = `${process.env.REACT_APP_API_URL}`;
 const DEFAULT_HEADERS = {
   "content-type": "application/json"
 };
-
-// set a constant to use as a key for local storage
-export const LOCAL_STORAGE_KEY = "USER:tokens";
 
 // on each request we need to send auth headers
 axios.interceptors.request.use(
@@ -45,7 +43,6 @@ axios.interceptors.response.use(
             JSON.stringify({ accessToken, clientToken, userToken })
         );
       }
-
       return response;
     },
     error => Promise.reject(error)

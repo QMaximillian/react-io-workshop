@@ -1,12 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import {StyledLink} from "./StyledLink";
+import {useAuth} from "../../hooks/use-auth";
 
 const Header = () => {
+  const {logOut} = useAuth();
+
   return (
       <HeaderContainer>
         <div>Places to eat</div>
-        <StyledLink to={'/'}>Logout</StyledLink>
+        <StyledLink to={'/'} onClick={logOut}>Logout</StyledLink>
       </HeaderContainer>
   );
 };

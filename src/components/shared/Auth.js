@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
-import {apiRequest, LOCAL_STORAGE_KEY} from "../../services/api";
+import {apiRequest} from "../../services/api";
 
 export const AuthContext = React.createContext();
+export const LOCAL_STORAGE_KEY = "USER::TOKENS";
 
 const Auth = ({children}) => {
   const [initialLoading, setInitialLoading] = useState(true);
@@ -10,10 +11,8 @@ const Auth = ({children}) => {
   const setCurrentUser = newUser => {
     setUser(newUser);
 
-    if (!user) {
+    if (!newUser) {
       localStorage.removeItem(LOCAL_STORAGE_KEY);
-    } else {
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(user));
     }
   };
 
@@ -33,7 +32,7 @@ const Auth = ({children}) => {
 
   useEffect(() => {
     authenticate();
-  });
+  }, []);
 
   if(initialLoading) {
     return null;
