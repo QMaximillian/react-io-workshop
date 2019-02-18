@@ -9,7 +9,7 @@ const DEFAULT_HEADERS = {
 };
 
 // set a constant to use as a key for local storage
-const LOCAL_STORAGE_KEY = "USER:tokens";
+export const LOCAL_STORAGE_KEY = "USER:tokens";
 
 // on each request we need to send auth headers
 axios.interceptors.request.use(

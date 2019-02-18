@@ -8,8 +8,8 @@ const Home = () => {
   return (
       <PageContainer>
         <h1>Welcome To Places to eat!</h1>
-        <StyledLink to={'/'}>LOG IN</StyledLink>
-        <StyledLink to={'/'}>REGISTER</StyledLink>
+        <StyledLink to={'/login'}>LOG IN</StyledLink>
+        <StyledLink to={'/register'}>REGISTER</StyledLink>
       </PageContainer>
   );
 };
