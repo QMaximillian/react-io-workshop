@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Burgers from "./pages/Burgers";
 
 
 class App extends Component {
   render() {
     return (
-      <Container>
-        <h1>Mastering Hooks</h1>
-      </Container>
+      <>
+        {/*<Home />*/}
+        {/*<Login />*/}
+        {/*<Register/>*/}
+        {/*<Burgers/>*/}
+      </>
     );
   }
 }
-
-const Container = styled.div`
-  padding: 50px;
-`;
 
 export default App;
