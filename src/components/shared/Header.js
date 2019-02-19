@@ -26,6 +26,6 @@ const HeaderContainer = styled.div`
 
 const UserName = styled.span`
   color: mediumpurple;
-`
+`;
 
 export default Header;

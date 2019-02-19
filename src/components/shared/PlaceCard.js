@@ -29,8 +29,4 @@ const CardAddress = styled.h6`
   margin: 2px;  
 `;
 
-
-
-
-
 export default PlaceCard;
