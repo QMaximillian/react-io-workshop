@@ -19,7 +19,7 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid gray;  
   margin-bottom: 15px;
-  padding: 15px;
+  padding: 15px 25px;
 `;
 
 export default Header;
